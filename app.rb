@@ -9,4 +9,10 @@ class RedmarkSinatraApp < Sinatra::Base
 
     erb :'users'
 end
+
+get '/aboutme' do
+
+  erb :'aboutme'
+end
+
 end
