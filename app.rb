@@ -15,4 +15,12 @@ get '/aboutme' do
   erb :'aboutme'
 end
 
+get '/users/:id' do
+  @user_id = params[:id]
+  @user = User.find(params[:id])
+  @columns = User.column_names
+  @table = User.table_name
+  erb :'each_user'
+end
+
 end
