@@ -1,0 +1,28 @@
+<h2> <%= @user.name %> </h2>
+<p>
+  A member of Redmart since <%= @user[:date_joined] %>
+</p>
+
+<h3>Account details</h3>
+<p>
+  Email address: <%= @user[:email] %>
+  User password: <%= @user[:password] %>
+</p>
+
+
+<h3>Billing details</h3>
+<p>
+  Address: <%= @user[:address] %>
+  <br>
+  Credit card number: <%= @user[:cc_number] %>
+</p>
+
+<!--
+<p>
+  <%= @columns %>
+</p>
+
+<p>
+  <%= @table %>
+</p>
+ -->

@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20160721050238) do
     t.string   "email",      limit: 50, null: false
     t.string   "address"
     t.string   "password",   limit: 50, null: false
-    t.string   "cc_number",  limit: 15, null: false
+    t.string   "cc_number",  limit: 25, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

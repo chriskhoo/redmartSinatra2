@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string    :email, null: false, limit: 50
       t.string    :address
       t.string    :password, null: false, limit: 50
-      t.string    :cc_number, null: false, limit: 15
+      t.string    :cc_number, null: false, limit: 25
 
       #must always have timestamps!
       t.timestamps

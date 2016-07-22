@@ -1,6 +1,7 @@
 #/ use in all
 require 'rubygems'
 require 'bundler'
+require 'faker'
 Bundler.require
 
 # this is the model
