@@ -1,0 +1,30 @@
+<h3>Form to list new product</h3>
+
+<form action="/products" method="post">
+
+  <div class="form-group">
+    <label for="name">Product Name</label>
+    <input id="name" type="text" name="product[name]" value="" placeholder="Name">
+  </div>
+
+  <div class="form-group">
+    <label> Brand ID
+      <input type="text" name="product[brand_id]" value="" placeholder="Numeric ID not name">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label>Category ID
+      <input type="text" name="product[category_id]" value="" placeholder="Numeric ID not name">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label> Price
+      <input type="text" name="product[price]" value="" placeholder="In dollars">
+    </label>
+  </div>
+
+  <input type="submit" value="submit">
+
+</form>

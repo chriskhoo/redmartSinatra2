@@ -1,0 +1,16 @@
+<h2> <%= @brand[:name] %> </h2>
+
+<h3>Brand details</h3>
+<p>
+  Brand ID: <%= @brand[:id] %>
+  <br>
+  Brand Name: <%= @brand[:name] %>
+</p>
+
+<p>
+  This brand was first listed on <%= @brand[:created_at] %>
+  <br>
+  This record was last updated on <%= @brand[:updated_at] %>
+</p>
+
+<a href="<%= @brand[:id] %>/edit ">Edit Brand</a>

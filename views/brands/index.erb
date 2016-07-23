@@ -1,0 +1,31 @@
+<h2>Brand page</h2>
+<a href="brands/new">Enter new brand</a>
+<h3>List of brands</h3>
+<table>
+  <thead>
+    <tr>
+      <th> ID </th>
+      <th> Brand name </th>
+      <th> Actions </th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @brands.each do |brand| %>
+      <tr>
+        <th><%= brand[:id]%></th>
+        <th><%= brand[:name]%></th>
+        <th>
+          <!--syntax for show  -->
+          <a href="brands/<%= brand[:id] %>">View</a> |
+          <!--syntax for edit  -->
+          <a href="brands/<%= brand[:id] %>/edit ">Edit</a> |
+          <!--syntax for delete  -->
+          <form action="/brands/<%= brand[:id] %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="Delete">
+          </form>
+        </th>
+      </tr>
+      <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,39 @@
+<h3>Form to edit existing user</h3>
+
+
+<form action="/users/<%= @user[:id] %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <div class="form-group">
+    <label> Name
+      <input type="text" name="user[name]" value="<%= @user[:name] %>">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label> Email
+      <input type="text" name="user[email]" value="<%= @user[:email] %>">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label>Password
+      <input type="text" name="user[password]" value="<%= @user[:password] %>">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label> Credit Card Number
+      <input type="text" name="user[cc_number]" value="<%= @user[:cc_number] %>">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label>Address
+      <input type="text" name="user[address]" value="<%= @user[:address] %>">
+    </label>
+  </div>
+
+  <input type="submit" value="submit">
+
+</form>

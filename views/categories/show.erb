@@ -1,0 +1,19 @@
+<h2> <%= @category[:name] %> </h2>
+<h3>Category details</h3>
+<p>
+  Category ID: <%= @category[:id] %>
+  <br>
+  Category Name: <%= @category[:name] %>
+  <br>
+  Category Description: <br>
+  <%= @category[:description] %>
+</p>
+
+<p>
+  This category was first listed on <%= @category[:created_at] %>
+  <br>
+  This record was last updated on <%= @category[:updated_at] %>
+</p>
+
+
+<a href="<%= @category[:id] %>/edit ">Edit Category</a>

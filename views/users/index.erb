@@ -1,72 +1,32 @@
 <h2>Users page</h2>
+<a href="users/new">Register new user</a>
 <h3>List of users</h3>
-<ul>
-  <% @users.each do |user| %>
-  <li>
-    <%= user.name%>
-  </li>
-  <% end %>
-</ul>
-
-<h3>Details of users</h3>
 <table>
   <thead>
     <tr>
-    <th>
-      ID
-    </th>
-    <th>
-      NAME
-    </th>
-    <th>
-      EMAIL
-    </th>
-    <th>
-      ADDRESS
-    </th>
-    <th>
-      PASSWORD
-    </th>
-    <th>
-      CC_NUMBER
-    </th>
-    <th>
-      CREATED ON
-    </th>
-    <th>
-      UPDATED ON
-    </th>
-  </tr>
-</thead>
-<tbody>
-  <% @users.each do |user| %>
-  <tr>
-    <th>
-      <%= user.id %>
-    </th>
-    <th>
-      <%= user.name %>
-    </th>
-    <th>
-      <%= user.email %>
-    </th>
-    <th>
-      <%= user.address %>
-    </th>
-    <th>
-      <%= user.password %>
-    </th>
-    <th>
-      <%= user.cc_number %>
-    </th>
-    <th>
-      <%= user.created_at %>
-    </th>
-    <th>
-      <%= user.updated_at %>
-    </th>
-
-  </tr>
-  <% end %>
-</tbody>
+      <th> ID </th>
+      <th> Name </th>
+      <th> Actions </th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <th><%= user[:id]%></th>
+        <th><%= user[:name]%></th>
+        <th>
+          <!--syntax for show  -->
+          <a href="users/<%= user[:id] %>">View</a> |
+          <!--syntax for edit  -->
+          <a href="users/<%= user[:id] %>/edit ">Edit</a> |
+          <!--syntax for delete  -->
+          <!-- <a href="users/<%= user[:id] %>/delete">Delete</a> -->
+          <form action="/users/<%= user[:id] %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="Delete">
+          </form>
+        </th>
+      </tr>
+      <% end %>
+  </tbody>
 </table>

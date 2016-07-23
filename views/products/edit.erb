@@ -1,0 +1,33 @@
+<h3>Form to edit existing products</h3>
+
+
+<form action="/products/<%= @product[:id] %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <div class="form-group">
+    <label> Name
+      <input type="text" name="product[name]" value="<%= @product[:name] %>">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label> Brand ID
+      <input type="text" name="product[brand_id]" value="<%= @product[:brand_id] %>">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label>Category ID
+      <input type="text" name="product[category_id]" value="<%= @product[:category_id] %>">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label> Price
+      <input type="text" name="product[price]" value="<%= @product[:price] %>">
+    </label>
+  </div>
+
+  <input type="submit" value="submit">
+
+</form>

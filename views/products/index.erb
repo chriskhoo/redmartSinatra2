@@ -1,0 +1,31 @@
+<h2>Product page</h2>
+<a href="products/new">Enter new product</a>
+<h3>List of products</h3>
+<table>
+  <thead>
+    <tr>
+      <th> ID </th>
+      <th> Product name </th>
+      <th> Actions </th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @products.each do |product| %>
+      <tr>
+        <th><%= product[:id]%></th>
+        <th><%= product[:name]%></th>
+        <th>
+          <!--syntax for show  -->
+          <a href="products/<%= product[:id] %>">View</a> |
+          <!--syntax for edit  -->
+          <a href="products/<%= product[:id] %>/edit ">Edit</a> |
+          <!--syntax for delete  -->
+          <form action="/products/<%= product[:id] %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="Delete">
+          </form>
+        </th>
+      </tr>
+      <% end %>
+  </tbody>
+</table>

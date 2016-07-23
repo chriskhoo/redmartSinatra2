@@ -1,11 +1,14 @@
 <h2> <%= @user.name %> </h2>
 <p>
-  A member of Redmart since <%= @user[:date_joined] %>
+  A member of Redmart since <%= @user[:created_at] %>
+  <br>
+  This record was last updated on <%= @user[:updated_at] %>
 </p>
 
 <h3>Account details</h3>
 <p>
   Email address: <%= @user[:email] %>
+  <br>
   User password: <%= @user[:password] %>
 </p>
 
@@ -17,12 +20,8 @@
   Credit card number: <%= @user[:cc_number] %>
 </p>
 
+<a href="<%= @user[:id] %>/edit ">Edit User</a>
 <!--
-<p>
-  <%= @columns %>
-</p>
-
-<p>
-  <%= @table %>
-</p>
+<%= @columns %>
+<%= @table %>
  -->

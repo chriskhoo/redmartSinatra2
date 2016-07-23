@@ -1,0 +1,31 @@
+<h2>Category page</h2>
+<a href="categories/new">Enter new category</a>
+<h3>List of categories</h3>
+<table>
+  <thead>
+    <tr>
+      <th> ID </th>
+      <th> Category name </th>
+      <th> Actions </th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @categories.each do |category| %>
+      <tr>
+        <th><%= category[:id]%></th>
+        <th><%= category[:name]%></th>
+        <th>
+          <!--syntax for show  -->
+          <a href="categories/<%= category[:id] %>">View</a> |
+          <!--syntax for edit  -->
+          <a href="categories/<%= category[:id] %>/edit ">Edit</a> |
+          <!--syntax for delete  -->
+          <form action="/categories/<%= category[:id] %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="Delete">
+          </form>
+        </th>
+      </tr>
+      <% end %>
+  </tbody>
+</table>

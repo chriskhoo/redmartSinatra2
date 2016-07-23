@@ -1,0 +1,18 @@
+<h2> <%= @product[:name] %> </h2>
+
+<h3>Product details</h3>
+<p>
+  Brand ID: <%= @product[:brand_id] %>
+  <br>
+  Category ID: <%= @product[:category_id] %>
+  <br>
+  Price: $<%= @product[:price] %>
+</p>
+
+<p>
+  Product was first listed on <%= @product[:created_at] %>
+  <br>
+  This record was last updated on <%= @product[:updated_at] %>
+</p>
+
+<a href="<%= @product[:id] %>/edit ">Edit Product</a>
