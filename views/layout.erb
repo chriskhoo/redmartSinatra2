@@ -4,16 +4,44 @@
     <meta charset="utf-8">
     <title>Redmart Sinatra</title>
     <link rel="stylesheet" href="/public/css/style.css" media="screen" title="no title" charset="utf-8">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Redmart Sinatra page</h1>
-    <a href="/about">About</a>
-    <a href="/users">Users</a>
-    <a href="/products">Products</a>
-    <a href="/brands">Brands</a>
-    <a href="/categories">Categories</a>
+    <header>
+      <h1>E-Commerce Sinatra page</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/users">Users</a>
+          </li>
+          <li>
+            <a href="/products">Products</a>
+            <ul>
+              <li>
+                <a href="/brands">Brands</a>
+              </li>
+              <li>
+                <a href="/categories">Categories</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
     <script type="text/javascript" src="/public/js/sript.js">
     </script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   </body>
 </html>

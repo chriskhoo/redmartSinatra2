@@ -14,15 +14,6 @@ require 'faker'
   )
 end
 
-(1..100).each do |i|
-  Product.create(
-  name: Faker::Commerce.product_name,
-  brand_id: rand(19)+1,
-  category_id: rand(19)+1,
-  price: Faker::Commerce.price
-  )
-end
-
 (1..20).each do |i|
   Brand.create(
   name: Faker::Company.name
@@ -33,5 +24,15 @@ end
   Category.create(
   name: Faker::Commerce.department,
   description: Faker::Lorem.sentence
+  )
+end
+
+(1..100).each do |i|
+  Product.create(
+  name: Faker::Commerce.product_name,
+  brand_id: rand(19)+1,
+  category_id: rand(19)+1,
+  price: Faker::Commerce.price,
+  description: Faker::Lorem.paragraph
   )
 end

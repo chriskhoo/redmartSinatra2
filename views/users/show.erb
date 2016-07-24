@@ -1,4 +1,5 @@
-<h2> <%= @user.name %> </h2>
+<h2> Admin View: User Details</h2>
+
 <p>
   A member of Redmart since <%= @user[:created_at] %>
   <br>
@@ -7,17 +8,21 @@
 
 <h3>Account details</h3>
 <p>
-  Email address: <%= @user[:email] %>
+  <strong>User ID:</strong> <%= @user[:id] %>
   <br>
-  User password: <%= @user[:password] %>
+  <strong>User name:</strong> <%= @user[:name] %>
+  <br>
+  <strong>Email address:</strong> <%= @user[:email] %>
+  <br>
+  <strong>User password:</strong> <%= @user[:password] %>
 </p>
 
 
 <h3>Billing details</h3>
 <p>
-  Address: <%= @user[:address] %>
+  <strong>Address:</strong> <%= @user[:address] %>
   <br>
-  Credit card number: <%= @user[:cc_number] %>
+  <strong>Credit card number:</strong> <%= @user[:cc_number] %>
 </p>
 
 <a href="<%= @user[:id] %>/edit ">Edit User</a>

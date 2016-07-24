@@ -1,12 +1,18 @@
-<h2> <%= @product[:name] %> </h2>
+<h2>Admin View: Product details </h2>
 
-<h3>Product details</h3>
 <p>
-  Brand ID: <%= @product[:brand_id] %>
+  <strong>Product ID:</strong> <%= @product[:id] %>
   <br>
-  Category ID: <%= @product[:category_id] %>
+  <strong>Product Name:</strong> <%= @product[:name] %>
   <br>
-  Price: $<%= @product[:price] %>
+  <strong>Product Description:</strong> <br>
+  <%= @product[:description] %>
+  <br>
+  <strong>Brand ID:</strong> <%= @product[:brand_id] %>
+  <br>
+  <strong>Category ID:</strong> <%= @product[:category_id] %>
+  <br>
+  <strong>Price:</strong> $<%= @product[:price] %>
 </p>
 
 <p>

@@ -8,6 +8,7 @@ class RedmarkSinatraApp < Sinatra::Base
     erb :about
   end
 
+
 # dynamic pages
 # users ----------------------------------------
   get '/users' do
